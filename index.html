@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        body { background-color: #063D3B; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        .container { position: relative; width: 400px; height: 400px; }
+        .secuencia {
+            position: absolute; width: 100%; height: 100%;
+            opacity: 0;
+            animation: revelar 10s forwards;
+        }
+        /* Ajusta los nombres de archivo aquí según los que hayas puesto */
+        .img-luz { animation-delay: 0s; }
+        .img-0 { animation-delay: 1.5s; }
+        .img-1 { animation-delay: 3s; }
+        .img-2 { animation-delay: 4.5s; }
+        .img-logo { animation-delay: 6s; }
+
+        @keyframes revelar {
+            0% { opacity: 0; transform: scale(0.9); }
+            10% { opacity: 1; transform: scale(1); }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .img-logo { animation: revelarFinal 3s forwards 6s; }
+        @keyframes revelarFinal {
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="luz.png" class="secuencia img-luz">
+        <img src="0.png" class="secuencia img-0">
+        <img src="1.png" class="secuencia img-1">
+        <img src="2.png" class="secuencia img-2">
+        <img src="logo.png" class="secuencia img-logo">
+    </div>
+</body>
+</html>
