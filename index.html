@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <title>Conecta2 | Acceso al Sistema</title>
     <style>
-        body { background-color: #063D3B; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        body { 
+            background-color: #063D3B; 
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            overflow: hidden; 
+        }
         .container { position: relative; width: 400px; height: 400px; }
         .secuencia {
             position: absolute; width: 100%; height: 100%;
             opacity: 0;
-            animation: revelar 10s forwards;
+            animation: revelar 3s forwards;
         }
-        /* Ajusta los nombres de archivo aquí según los que hayas puesto */
+        
+        /* Secuencia de tiempo */
         .img-luz { animation-delay: 0s; }
         .img-0 { animation-delay: 1.5s; }
         .img-1 { animation-delay: 3s; }
         .img-2 { animation-delay: 4.5s; }
-        .img-logo { animation-delay: 6s; }
+        .img-logo { animation: revelarFinal 3s forwards 6s; }
 
         @keyframes revelar {
-            0% { opacity: 0; transform: scale(0.9); }
-            10% { opacity: 1; transform: scale(1); }
-            80% { opacity: 1; }
+            0% { opacity: 0; transform: scale(0.95); }
+            50% { opacity: 1; transform: scale(1); }
             100% { opacity: 0; }
         }
-        .img-logo { animation: revelarFinal 3s forwards 6s; }
         @keyframes revelarFinal {
             to { opacity: 1; transform: scale(1); }
         }
